@@ -1,18 +1,24 @@
 import java.util.ArrayList;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 public class lminmax2 {
     public static void main(String[] args) {
-        ArrayList<Integer> arr = new ArrayList<>(); // Test input 
+        ArrayList<Integer> arr = new ArrayList<>(); // Test input
         arr.add(4);
         arr.add(7);
         arr.add(3);
         arr.add(9);
         arr.add(2);
         arr.add(1);
- 
-        CMP find = new CMP(); // CMP is just a class that contain lambda function 
+
+        CMP find = new CMP(); // CMP is just a class that contain lambda function
         System.out.println(find.MAX(arr));
         System.out.println(find.MIN(arr));
+
+        Stream<Integer> stream = Stream.of(2,5,8,7,4,1,9,6,3,0);
+        stream.forEach(System.out::print);
+
     }   
 }
 
