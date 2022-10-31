@@ -2,9 +2,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.regex.Pattern;
-import java.util.ArrayList;
 import java.io.BufferedReader;
-import java.util.Collections;
 public class countWord {
     private static final BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     public static void main(String[] args) throws IOException {
@@ -17,7 +15,6 @@ public class countWord {
         Pattern pattern = Pattern.compile(" ");
 
         HashMap<String, Integer> wordCount = (HashMap<String, Integer>) pattern.splitAsStream(test);
-          
 
         double end = System.currentTimeMillis(); 
         System.out.println(end - start);
